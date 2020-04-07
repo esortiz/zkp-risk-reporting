@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { ProverComponent } from './prover/prover.component';
 import { VerifierComponent } from './verifier/verifier.component';
 import { StartComponent } from './start/start.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
+import { AssetDetailsComponent } from './asset-details/asset-details.component';
 
 @NgModule({
   imports: [ 
@@ -16,13 +18,16 @@ import { StartComponent } from './start/start.component';
       { path: '', component: StartComponent },
       { path: 'prover', component: ProverComponent },
       { path: 'verifier', component: VerifierComponent },
+      { path: 'assets/:assetId', component: AssetDetailsComponent}
     ])
   ],
   declarations: [ 
     AppComponent, 
     ProverComponent, 
     VerifierComponent, 
-    StartComponent 
+    StartComponent, 
+    TopBarComponent, 
+    AssetDetailsComponent 
   ],
   bootstrap: [ AppComponent ]
 })

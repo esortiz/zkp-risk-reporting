@@ -1,3 +1,11 @@
-<p>
-prover works!
-</p>
+<h1> Prover </h1>
+<h2> Portfolio: MSCI Index </h2>
+<div *ngFor="let asset of assets; index as assetId">
+     <h3>
+       <a [title]="asset.name + ' details'" [routerLink]="['/assets', assetId]">
+        {{ asset.name }}
+       </a>
+   </h3>
+</div>
+
+<button> Proof of Aggregated Risk </button>
